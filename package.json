@@ -1,0 +1,46 @@
+{
+  "name": "anets",
+  "version": "0.1.0",
+  "description": "JavaScript library about PPT complex animation",
+  "main": "index.js",
+  "scripts": {
+    "build:umd": "scripty",
+    "build:esm": "scripty",
+    "build:minify": "scripty",
+    "build": "scripty"
+  },
+  "browser": "dist/index.ts",
+  "keywords": [
+    "wipe",
+    "barn",
+    "checkerBoard",
+    "blinds",
+    "dissolve",
+    "randombar",
+    "strips",
+    "wedge",
+    "wheel",
+    "box",
+    "circle",
+    "diamon",
+    "plus",
+    "animation"
+  ],
+  "author": "henryfordstick",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:henryfordstick/anets.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "rollup": "^2.62.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-typescript": "^1.0.1",
+    "scripty": "^2.0.0",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.4",
+    "uglify-js": "^3.14.5"
+  }
+}
