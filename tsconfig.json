@@ -1,9 +1,30 @@
 {
   "compilerOptions": {
     "target": "ES5",
-    "module": "commonjs",
+    "module": "ESNext",
+    "lib": ["DOM","ESNext"],
+    "jsx": "react",
+    // 开启所有严格的类型检查
     "strict": true,
-    
-
-  }
+     // 不允许隐式的any类型
+    "noImplicitAny": true,
+    // 不允许this有隐式的any类型
+    "noImplicitThis": true,
+    // 允许export=导出，由import from 导入
+    "esModuleInterop": true,
+    // 不允许把null、undefined赋值给其他类型的变量
+    "strictNullChecks": true,
+    // 禁止对同一个文件的不一致的引用。
+    "forceConsistentCasingInFileNames": true,
+    // 生成声明文件，开启后会自动生成声明文件
+    "declaration": true,
+    // 模块解析策略，ts默认用node的解析策略，即相对的方式导入
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "paths": {
+      "package": ["./package.json"]
+    }
+  },
+  "include": ["src","tests"],
+  "exclude": ["node_modules", "dist", "scripts"]
 }
