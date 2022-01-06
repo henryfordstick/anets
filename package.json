@@ -2,14 +2,17 @@
   "name": "anets",
   "version": "0.1.0",
   "description": "JavaScript library about PPT complex animation",
-  "main": "index.js",
+  "main": "dist/Anets.js",
+  "module": "dist/Anets.esm.js",
+  "typings": "dist/types/index.d.ts",
+  "browser": "dist/Anets.min.js",
   "scripts": {
     "build:umd": "scripty",
     "build:esm": "scripty",
     "build:minify": "scripty",
-    "build": "scripty"
+    "build": "scripty",
+    "lint": "scripty"
   },
-  "browser": "dist/index.ts",
   "keywords": [
     "wipe",
     "barn",
@@ -27,17 +30,31 @@
     "animation"
   ],
   "author": "henryfordstick",
-  "license": "ISC",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git@github.com:henryfordstick/anets.git"
   },
-  "dependencies": {},
+  "dependencies": {
+    "html2canvas": "^1.4.0"
+  },
   "devDependencies": {
+    "@rollup/plugin-json": "^4.1.0",
+    "@types/html2canvas": "^1.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.9.0",
+    "@typescript-eslint/parser": "^5.9.0",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb-typescript": "^16.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-jest": "^25.3.4",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.5.1",
     "rollup": "^2.62.0",
     "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-eslint": "^7.0.0",
     "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-typescript": "^1.0.1",
+    "rollup-plugin-typescript2": "^0.31.1",
     "scripty": "^2.0.0",
     "tslib": "^2.3.1",
     "typescript": "^4.5.4",
