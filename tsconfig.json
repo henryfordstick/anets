@@ -9,10 +9,15 @@
     "noImplicitAny": true,
     // 不允许this有隐式的any类型
     "noImplicitThis": true,
+    // 检查只声明、未使用的局部变量(只提示不报错)
+    "noUnusedLocals": true,
+    // 检查未使用的函数参数(只提示不报错)
+    "noUnusedParameters": true,
     // 允许export=导出，由import from 导入
     "esModuleInterop": true,
     // 不允许把null、undefined赋值给其他类型的变量
     "strictNullChecks": true,
+    "strictPropertyInitialization": true,
     // 禁止对同一个文件的不一致的引用。
     "forceConsistentCasingInFileNames": true,
     // 生成声明文件，开启后会自动生成声明文件

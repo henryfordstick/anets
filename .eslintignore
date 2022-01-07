@@ -3,5 +3,6 @@ node_modules/
 dist/
 build/
 script/
+backup/
 .eslintrc/
 webpack.config.js
