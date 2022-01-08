@@ -62,7 +62,7 @@ export interface AnetsOptions {
   item: string;
   sound?: string;
   audioElement?: string;
-  CanvasDOM: HTMLCanvasElement;
+  CanvasDOM?: HTMLCanvasElement;
   ani: Ani;
   onStart?: (options: AnetsOptions) => void;
   onEnd?: (options: AnetsOptions) => void;
