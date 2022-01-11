@@ -1,6 +1,6 @@
 # anets
 
-JavaScript library about PPT complex animation. The (document address)[https://anets.pages.dev/]
+JavaScript library about PPT complex animation. The [document address](https://anets.pages.dev/)
 
 ### Installation
 
