@@ -1,6 +1,6 @@
 {
   "name": "anets",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "JavaScript library about PPT complex animation",
   "main": "dist/Anets.js",
   "module": "dist/Anets.esm.js",

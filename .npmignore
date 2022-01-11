@@ -2,6 +2,7 @@ node_modules
 yarn-error.log
 .idea
 .DS_Store
+jest.config.js
 backup
 /script
 /tests
