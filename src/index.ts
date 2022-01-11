@@ -37,7 +37,7 @@ class Anets {
 
   private _rafId!: number;
 
-  private _target: string | null = null;
+  static _target: string | null = null;
 
   private _currentEl: HTMLElement | null = null;
 
@@ -50,8 +50,15 @@ class Anets {
   static readonly version: string = version;
 
   constructor(options: AnetsOptions, callback: () => void) {
-    this._options = options;
+    const { item } = (this._options = options);
     this._callback = callback;
+
+    if (Anets._target === item) {
+      console.log("Don't repeat the call!");
+      return;
+    }
+
+    Anets._target = item;
 
     try {
       this._init();
@@ -72,12 +79,6 @@ class Anets {
       name: "start",
       options: this._options,
     });
-
-    if (this._target === item) {
-      console.log("Don't repeat the call!");
-    }
-
-    this._target = item;
 
     addGlobalStyle();
 
@@ -229,7 +230,6 @@ class Anets {
     };
 
     const canvas = await html2canvas(this._currentEl, options);
-    // html2canvas 的画布绘制不了
     return canvas;
   }
 
@@ -1033,7 +1033,7 @@ class Anets {
     removeElement(<HTMLCanvasElement>this._baseCanvas?.cvs);
     this._currentToggleClassName(false);
     this._callback?.bind(null, this._options)();
-    this._target = null;
+    Anets._target = null;
     this._currentEl = null;
     this._canvas = null;
     this._baseCanvas = null;

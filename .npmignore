@@ -1,0 +1,9 @@
+node_modules
+yarn-error.log
+.idea
+.DS_Store
+backup
+/script
+/tests
+/src
+/build
