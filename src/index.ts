@@ -102,7 +102,11 @@ class Anets {
     if (!item || getType(item) !== "string" || item === "") {
       throw new Error("Incorrect input of target element!");
     }
-    return document.querySelector("#" + item) as HTMLElement;
+    const el = document.querySelector(item);
+    if (!el) {
+      throw new Error("The animation element was passed in incorrectly");
+    }
+    return el as HTMLElement;
   }
 
   /**
