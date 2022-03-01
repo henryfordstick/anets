@@ -1,6 +1,6 @@
 {
   "name": "anets",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "JavaScript library about PPT complex animation",
   "main": "dist/Anets.js",
   "module": "dist/Anets.esm.js",
@@ -11,7 +11,9 @@
     "build:esm": "scripty",
     "build:minify": "scripty",
     "build": "scripty",
-    "lint": "scripty"
+    "lint": "scripty",
+    "test": "jest",
+    "test:coverage": "scripty"
   },
   "keywords": [
     "wipe",
@@ -40,8 +42,11 @@
   },
   "devDependencies": {
     "@rollup/plugin-json": "^4.1.0",
+    "@testing-library/jest-dom": "^5.16.2",
     "@types/html2canvas": "^1.0.0",
     "@types/jest": "^27.4.0",
+    "@types/rewire": "^2.5.28",
+    "@types/testing-library__jest-dom": "^5.14.2",
     "@typescript-eslint/eslint-plugin": "^5.9.0",
     "@typescript-eslint/parser": "^5.9.0",
     "eslint": "^8.2.0",
@@ -52,6 +57,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "jest": "^27.4.7",
     "prettier": "^2.5.1",
+    "rewire": "^6.0.0",
     "rollup": "^2.62.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-eslint": "^7.0.0",

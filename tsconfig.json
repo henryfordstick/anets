@@ -27,6 +27,6 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
   },
-  "include": ["src","tests"],
+  "include": ["src","tests", "tests/setupTests.ts"],
   "exclude": ["node_modules", "dist", "scripts"]
 }

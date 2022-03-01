@@ -139,11 +139,14 @@ function divide(a: number, b: number): number {
  * @param {number} len
  * @returns {number[]}
  */
-function getRandomArrayList(len: number): number[] {
+function getRandomArrayList(len = 1): number[] {
   const arrList = new Array(len).fill(0).map((_, i) => i);
   for (let i = arrList.length - 1; i > 0; --i) {
     const rdm = floor(random() * (i + 1));
-    [arrList[i], arrList[rdm]] = [arrList[rdm], arrList[i]];
+    const temp = arrList[rdm];
+    arrList[rdm] = arrList[i];
+    arrList[i] = temp;
+    // [arrList[i], arrList[rdm]] = [arrList[rdm], arrList[i]];
   }
   return arrList;
 }
